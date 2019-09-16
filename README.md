@@ -67,3 +67,16 @@ const newFunc = partApply(func, 3);
 
 console.log(newFunc(2)) // 11
 ```
+
+#### 5. Реаллизовать функцию, которая принимает неограниченное число аргументов - функций одного аргумента и возвращает новую функцию, являющуюся композицией переданных функций.
+
+```js
+function compose(func1, func2, func3, ..) { ... }
+
+const func1 = arg => arg * 2;
+const func2 = arg => arg + 10;
+const func3 = arg => arg - 2;
+
+const composedFunc = compose(func1, func2, func3);
+console.log(composedFunc(2)); // 20 // func3(2) -> 0 func2(0) -> 10 func1(10) -> 20
+```
